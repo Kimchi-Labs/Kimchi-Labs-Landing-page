@@ -1,22 +1,7 @@
-import {
-  Menubar,
-  MenubarContent,
-  MenubarItem,
-  MenubarMenu,
-  MenubarSeparator,
-  MenubarShortcut,
-  MenubarTrigger,
-} from "@/components/ui/menubar"
-
+import { Menubar } from "@/components/ui/menubar"
+import Image from "next/image";
 import { Nunito_Sans } from "next/font/google";
-import { relative } from "path";
 import { Button } from "@/components/ui/button"
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip"
 import { Separator } from "@/components/ui/separator"
 import * as motion from "motion/react-client"
 import Link from 'next/link';
@@ -57,7 +42,7 @@ export default function Home() {
     },
   }}
 >
-  <img
+  <Image
     src="/logo.svg"
     alt="logo"
     style={{ height: "32px", width: "118px", paddingLeft: 2 }}
@@ -85,16 +70,16 @@ export default function Home() {
     </Button>
 
     <Button variant="ghost">
-      <a href="https://github.com/Alexx1105/MacStat-v2.1">
+      <a href="/macstat">
       <h1 className={`${nunitoSans.className} opacity-100 font-bold text-xs`} style={{color:'#7d7d7d'}}>MacStat</h1>
       </a>
     </Button>
 
-    <Link href="/feedback">
+   
     <Button variant="ghost">
       <h1 className={`${nunitoSans.className} opacity-50 font-bold text-xs`}>Feedback</h1>
     </Button>
-    </Link>
+  
 
 
     <Link href="mailto:alexh2877@gmail.com">
@@ -112,7 +97,7 @@ export default function Home() {
 </Menubar>
 <div style={{marginTop: 33, position: "relative"}}> 
 
-<img
+<Image
       src="/background.svg"
       alt="scaffolding"
       style={{
@@ -137,7 +122,7 @@ export default function Home() {
       initial={{ opacity: 0, filter: "blur(10px)" }}
       animate={{ opacity: 1, filter: "blur(0px)" }}
       transition={{
-        duration: 0.8,
+        duration: 0.5,
         ease: "easeOut", // Smooth fade and blur removal
       }}
       style={{fontSize:"16px", fontWeight: "900", position: "absolute", top: 100, left: 300, opacity: 0.5, paddingTop: 5, color:'#7d7d7d', letterSpacing: -0.5}} className={nunitoSans.className}>Building original and practical<p> 
@@ -145,8 +130,9 @@ export default function Home() {
            developers alike... And our repos are </p>
            always open source.</motion.h3>
 
+          <a href="https://github.com/Alexx1105/MuscleMemory">
            <Button variant="outline" className="h-[54px] w-[211px] rounded-b-md" style={{position: "absolute", top: 315, left: 52}}>
-           <img src="/mmicon.svg" alt="mm icon" style={{width: "45px", height: "45px", marginLeft: -12}}/>
+           <Image src="/mmicon.svg" alt="mm icon" style={{width: "45px", height: "45px", marginLeft: -12}}/>
            <div style={{textAlign: "center", marginLeft: "-1px"}}> 
             <motion.h1 animate={{
     opacity: [0, 0.5, 1],
@@ -171,9 +157,11 @@ style={{fontSize: "12px", opacity: "0.5", fontWeight: "600", paddingRight: "50px
             style={{fontSize: "12px", fontWeight: "900", marginLeft: "10", letterSpacing: -0.5 }} className={nunitoSans.className}>Beta version coming soon!</motion.h1>
             </div>
            </Button>
+</a>
 
+           <a href="https://github.com/Alexx1105/MacStat-v2.1">
            <Button variant="outline" className="h-[54px] w-[211px] rounded-b-md" style={{position: "absolute", bottom: 276, right: -50}}>
-           <img src="/MacStat - classic.svg" alt="ms icon" style={{width: "45px", height: "45px", marginLeft: -12}}/>
+           <Image src="/MacStat - classic.svg" alt="ms icon" style={{width: "45px", height: "45px", marginLeft: -12}}/>
            <div style={{textAlign: "center", marginLeft: "-5px"}}> 
             <motion.h1 animate={{
     opacity: [0, 0.5, 1],
@@ -183,7 +171,7 @@ style={{fontSize: "12px", opacity: "0.5", fontWeight: "600", paddingRight: "50px
     duration: 1,
     ease: "easeOut",
     times: [0, 0.7, 1], // Control timing of each keyframe
-  }}style={{fontSize: "12px", opacity: "0.5", fontWeight: "600", paddingRight: "1px", color:'#7d7d7d', letterSpacing: -0.5 }} className={nunitoSans.className}>v 2.1 out now for download</motion.h1>
+  }}style={{fontSize: "12px", opacity: "0.5", fontWeight: "600", paddingRight: "1px", color:'#7d7d7d', letterSpacing: -0.5 }} className={nunitoSans.className}>v 2.5 out now for download</motion.h1>
             <motion.h1
             animate={{
               opacity: [0, 0.5, 1],
@@ -197,7 +185,7 @@ style={{fontSize: "12px", opacity: "0.5", fontWeight: "600", paddingRight: "50px
             style={{fontSize: "12px", fontWeight: "900", marginLeft: "10", letterSpacing: -0.5 }} className={nunitoSans.className}>v3.0 overhaul coming soon!</motion.h1>
             </div>
            </Button>
-
+     </a>
 </div>
 
 <div style={{position: "absolute", top: 576, justifyContent: "center", }}>
@@ -219,38 +207,38 @@ style={{fontSize: "12px", opacity: "0.5", fontWeight: "600", paddingRight: "50px
           <div style={{position:"absolute", paddingTop: 15}}>
           <Button variant="outline" className="h-[122px] w-[122px] rounded-2xl ml-2  ">
             
-          <img src="/swift-15.svg" alt="ms icon" style={{width: "37px", height: "37px", position: "absolute", top: 27, left: 20}}/>
-          <img src="/plus.circle.svg" alt="ms icon" style={{width: "19px", height: "19px", position: "absolute", top: 27, left: 100, opacity: "0.5"}}/>
+          <Image src="/swift-15.svg" alt="ms icon" style={{width: "37px", height: "37px", position: "absolute", top: 27, left: 20}}/>
+          <Image src="/plus.circle.svg" alt="ms icon" style={{width: "19px", height: "19px", position: "absolute", top: 27, left: 100, opacity: "0.5"}}/>
           <h1 style={{fontSize: "14px", fontWeight: "900", position: "absolute", opacity: "0.5", marginLeft: -50, marginTop: 63}} className={nunitoSans.className}>Swift & <p>SwiftUI</p></h1>
           </Button>
           <Button variant="outline" className="h-[122px] w-[122px] rounded-2xl ml-5 ">
-          <img src="/notion-2 1.svg" alt="ms icon" style={{width: "37px", height: "37px", position: "absolute", top: 27, left: 160}}/>
-          <img src="/plus.circle.svg" alt="ms icon" style={{width: "19px", height: "19px", position: "absolute", top: 27, left: 245, opacity: "0.5"}}/>
+          <Image src="/notion-2 1.svg" alt="ms icon" style={{width: "37px", height: "37px", position: "absolute", top: 27, left: 160}}/>
+          <Image src="/plus.circle.svg" alt="ms icon" style={{width: "19px", height: "19px", position: "absolute", top: 27, left: 245, opacity: "0.5"}}/>
           <h1 style={{fontSize: "14px", fontWeight: "900", position: "absolute", opacity: "0.5", marginLeft: -50, marginTop: 63}} className={nunitoSans.className}>Notion<p>API</p></h1>
           </Button>
           <Button variant="outline" className="h-[122px] w-[122px] rounded-2xl ml-5 ">
-          <img src="/firebase-2 1.svg" alt="ms icon" style={{width: "37px", height: "37px", position: "absolute", top: 27, left: 300}}/>
-          <img src="/plus.circle.svg" alt="ms icon" style={{width: "19px", height: "19px", position: "absolute", top: 27, left: 385, opacity: "0.5"}}/>
+          <Image src="/firebase-2 1.svg" alt="ms icon" style={{width: "37px", height: "37px", position: "absolute", top: 27, left: 300}}/>
+          <Image src="/plus.circle.svg" alt="ms icon" style={{width: "19px", height: "19px", position: "absolute", top: 27, left: 385, opacity: "0.5"}}/>
           <h1 style={{fontSize: "14px", fontWeight: "900", position: "absolute", opacity: "0.5", marginLeft: -40, marginTop: 63}} className={nunitoSans.className}>Deploy w<p>firebase</p></h1>
           </Button>
           <Button variant="outline" className="h-[122px] w-[122px] rounded-2xl ml-5 ">
-          <img src="/typescript 1.svg" alt="ms icon" style={{width: "37px", height: "37px", position: "absolute", top: 27, left: 445}}/>
-          <img src="/plus.circle.svg" alt="ms icon" style={{width: "19px", height: "19px", position: "absolute", top: 27, left: 530, opacity: "0.5"}}/>
+          <Image src="/typescript 1.svg" alt="ms icon" style={{width: "37px", height: "37px", position: "absolute", top: 27, left: 445}}/>
+          <Image src="/plus.circle.svg" alt="ms icon" style={{width: "19px", height: "19px", position: "absolute", top: 27, left: 530, opacity: "0.5"}}/>
           <h1 style={{fontSize: "14px", fontWeight: "900", position: "absolute", opacity: "0.5", marginLeft: -30, marginTop: 75}} className={nunitoSans.className}>TypeScript</h1>
           </Button>
           <Button variant="outline" className="h-[122px] w-[122px] rounded-2xl ml-5 ">
-          <img src="/react-1 1.svg" alt="ms icon" style={{width: "37px", height: "37px", position: "absolute", top: 27, left: 585}}/>
-          <img src="/plus.circle.svg" alt="ms icon" style={{width: "19px", height: "19px", position: "absolute", top: 27, left: 670, opacity: "0.5"}}/>
+          <Image src="/react-1 1.svg" alt="ms icon" style={{width: "37px", height: "37px", position: "absolute", top: 27, left: 585}}/>
+          <Image src="/plus.circle.svg" alt="ms icon" style={{width: "19px", height: "19px", position: "absolute", top: 27, left: 670, opacity: "0.5"}}/>
           <h1 style={{fontSize: "14px", fontWeight: "900", position: "absolute", opacity: "0.5", marginLeft: -60, marginTop: 75}} className={nunitoSans.className}>React</h1>
           </Button>
           <Button variant="outline" className="h-[122px] w-[122px] rounded-2xl ml-5 ">
-          <img src="/next-js.svg" alt="ms icon" style={{width: "37px", height: "37px", position: "absolute", top: 27, left: 730}}/>
-          <img src="/plus.circle.svg" alt="ms icon" style={{width: "19px", height: "19px", position: "absolute", top: 27, left: 812, opacity: "0.5"}}/>
+          <Image src="/next-js.svg" alt="ms icon" style={{width: "37px", height: "37px", position: "absolute", top: 27, left: 730}}/>
+          <Image src="/plus.circle.svg" alt="ms icon" style={{width: "19px", height: "19px", position: "absolute", top: 27, left: 812, opacity: "0.5"}}/>
           <h1 style={{fontSize: "14px", fontWeight: "900", position: "absolute", opacity: "0.5", marginLeft: -50, marginTop: 75}} className={nunitoSans.className}>Node.js</h1>
           </Button>
           <Button variant="outline" className="h-[122px] w-[122px] rounded-2xl ml-5 ">
-          <img src="/shadcn-ui.svg" alt="ms icon" style={{width: "37px", height: "37px", position: "absolute", top: 27, left: 870}}/>
-          <img src="/plus.circle.svg" alt="ms icon" style={{width: "19px", height: "19px", position: "absolute", top: 27, left: 955, opacity: "0.5"}}/>
+          <Image src="/shadcn-ui.svg" alt="ms icon" style={{width: "37px", height: "37px", position: "absolute", top: 27, left: 870}}/>
+          <Image src="/plus.circle.svg" alt="ms icon" style={{width: "19px", height: "19px", position: "absolute", top: 27, left: 955, opacity: "0.5"}}/>
           <h1 style={{fontSize: "14px", fontWeight: "900", position: "absolute", opacity: "0.5", marginLeft: -30, marginTop: 75}} className={nunitoSans.className}>Shadcn ui</h1>
           </Button>
           </div>
@@ -273,7 +261,7 @@ style={{fontSize: "12px", opacity: "0.5", fontWeight: "600", paddingRight: "50px
         }}
          
          >
-          <img src="/minikimchi.svg" alt="logo kimchi" style={{width: 31, height: 30, position: "relative", top: 385, display:"flex"}}/>  
+          <Image src="/minikimchi.svg" alt="logo kimchi" style={{width: 31, height: 30, position: "relative", top: 385, display:"flex"}}/>  
          </motion.button>
 
   <h1 className={`${nunitoSans.className} text-sm opacity-50 font-semibold pr-12 pt-[400px] `} style={{letterSpacing: -0.5}}>
@@ -307,11 +295,11 @@ style={{fontSize: "12px", opacity: "0.5", fontWeight: "600", paddingRight: "50px
       </a>
     </Button>
 
-    <Link href="/feedback">
+   
   <Button variant="ghost">
     <h1 className={`${nunitoSans.className} opacity-50 font-bold text-xs`}>Feedback</h1>
   </Button>
-</Link>
+
 
 
 <Link href="mailto:alexh2877@gmail.com">
