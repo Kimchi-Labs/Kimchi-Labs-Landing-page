@@ -41,6 +41,7 @@ import Image from 'next/image';
   }}
 >
   <Image
+    width={118}
     src="/logo.svg"
     alt="logo"
     style={{ height: "32px", width: "118px", paddingLeft: 2, paddingTop: 5 }}
@@ -50,7 +51,7 @@ import Image from 'next/image';
   <div className="absolute" style={{ marginTop: -35, left: 220 }}>
   <div className="absolute left-1/4 flex gap-1">
     <Button variant="ghost">
-      <a  href="https://discord.gg/9UW4Z9zJ">
+      <a  href="https://discord.gg/23PSGZ6j">
       <h1 className={`${nunitoSans.className} opacity-50 font-bold text-xs`}>Discord</h1>
       </a>
     </Button>
@@ -62,7 +63,7 @@ import Image from 'next/image';
     </Button>
 
     <Button variant="ghost">
-      <a href="https://github.com/Alexx1105/MuscleMemory">
+      <a href="/musclememory">
       <h1 className={`${nunitoSans.className} opacity-100 font-bold text-xs`} style={{color:'#7d7d7d'}}>MuscleMemory</h1>
       </a>
     </Button>
@@ -74,9 +75,7 @@ import Image from 'next/image';
     </Button>
 
    
-    <Button variant="ghost">
-      <h1 className={`${nunitoSans.className} opacity-50 font-bold text-xs`}>Feedback</h1>
-    </Button>
+    
     
 
 

@@ -43,6 +43,8 @@ export default function Home() {
   }}
 >
   <Image
+  width={118}
+  height={32}
     src="/logo.svg"
     alt="logo"
     style={{ height: "32px", width: "118px", paddingLeft: 2 }}
@@ -52,7 +54,7 @@ export default function Home() {
   <div className="absolute" style={{ marginTop: -35, left: 220 }}>
   <div className="absolute left-1/4 flex gap-1">
     <Button variant="ghost">
-      <a  href="https://discord.gg/9UW4Z9zJ">
+      <a  href="https://discord.gg/23PSGZ6j">
       <h1 className={`${nunitoSans.className} opacity-50 font-bold text-xs`}>Discord</h1>
       </a>
     </Button>
@@ -64,7 +66,7 @@ export default function Home() {
     </Button>
 
     <Button variant="ghost">
-      <a href="https://github.com/Alexx1105/MuscleMemory">
+      <a href="/musclememory">
       <h1 className={`${nunitoSans.className} opacity-100 font-bold text-xs`} style={{color:'#7d7d7d'}}>MuscleMemory</h1>
       </a>
     </Button>
@@ -76,10 +78,7 @@ export default function Home() {
     </Button>
 
    
-    <Button variant="ghost">
-      <h1 className={`${nunitoSans.className} opacity-50 font-bold text-xs`}>Feedback</h1>
-    </Button>
-  
+    
 
 
     <Link href="mailto:alexh2877@gmail.com">
@@ -98,6 +97,8 @@ export default function Home() {
 <div style={{marginTop: 33, position: "relative"}}> 
 
 <Image
+      width={706}
+      height={530}
       src="/background.svg"
       alt="scaffolding"
       style={{
@@ -296,9 +297,7 @@ style={{fontSize: "12px", opacity: "0.5", fontWeight: "600", paddingRight: "50px
     </Button>
 
    
-  <Button variant="ghost">
-    <h1 className={`${nunitoSans.className} opacity-50 font-bold text-xs`}>Feedback</h1>
-  </Button>
+  
 
 
 
